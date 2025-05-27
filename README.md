@@ -10,3 +10,11 @@ This repo houses:
    + Released as a full SD card image with Raspbian and code pre-installed
 - PCB sheild to fit onto the RPi02W
 - Encloser CAD files
+
+## Build App Code
+
+Need:
+
+- git
+- build-essential (gcc, make)
+- i2c-tools, libi2c-dev
