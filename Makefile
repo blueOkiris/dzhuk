@@ -43,6 +43,7 @@ endif
 OBJNAME :=		dzhuk-$(VERS).bin
 SRC :=			$(wildcard src/*.c)
 OBJS =			$(SRC:src/%.c=obj/%.o)
+HFILES =		$(wildcard include/*.h)
 
 # Targets
 
@@ -69,7 +70,7 @@ clean:
 	-rm -rf $(APPDIR)
 	-rm -rf *.exe
 
-obj/%.o: src/%.c
+obj/%.o: src/%.c $(HFILES)
 	mkdir -p obj/
 	$(CC) -o $@ $(CFLAGS) -c $<
 
